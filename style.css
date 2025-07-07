@@ -1,0 +1,109 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #12121e;
+    color: #e0e0e0;
+    margin: 0;
+    overflow: hidden; /* Prevents scrollbars if canvas is large */
+}
+
+.app-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Controls Panel */
+.controls-panel {
+    background-color: #1c1c2b;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.5);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.controls-panel h2 {
+    text-align: center;
+    color: #8a9ff0;
+    border-bottom: 1px solid #333;
+    padding-bottom: 15px;
+    margin-top: 0;
+}
+
+.control-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.control-group input[type="number"],
+.control-group input[type="range"] {
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+.resolution-inputs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.resolution-inputs input {
+    background: #2a2a3a;
+    border: 1px solid #444;
+    color: #fff;
+    padding: 8px;
+    border-radius: 4px;
+    width: 100px;
+}
+
+/* Buttons */
+.button-group {
+    margin-top: auto; /* Pushes buttons to the bottom */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4f5a9e;
+    color: white;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #6a76c2;
+}
+
+button.primary-btn {
+    background-color: #8a9ff0;
+    color: #12121e;
+    font-weight: bold;
+}
+
+button.primary-btn:hover {
+    background-color: #a8baff;
+}
+
+/* Canvas Container */
+.canvas-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: repeating-conic-gradient(#222 0% 25%, #2a2a2a 0% 50%) 50% / 20px 20px;
+}
+
+#starfield-canvas {
+    background-color: black;
+    box-shadow: 0 0 15px rgba(0,0,0,0.7);
+    max-width: 100%;
+    max-height: 100%;
+}
